@@ -1,7 +1,9 @@
 # kubernetes-orangesys-telegraf
 
 ## How to monitoring kubernetes use orangesys
+
 ![alt text](img/1.png)
+
 ### create monitoring namespace
 
 ```sh
