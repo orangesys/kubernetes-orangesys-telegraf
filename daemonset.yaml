@@ -51,13 +51,10 @@ spec:
         - name: sys
           mountPath: /rootfs/sys
           readOnly: true
-        - name: docker
-          mountPath: /var/run/docker.sock
-          readOnly: true
         - name: proc
           mountPath: /rootfs/proc
           readOnly: true
-        - name: docker-socket
+        - name: dockersocket
           mountPath: /var/run/docker.sock
         - name: utmp
           mountPath: /var/run/utmp
@@ -69,7 +66,7 @@ spec:
       - name: sys
         hostPath:
           path: /sys
-      - name: docker-socket
+      - name: dockersocket
         hostPath:
           path: /var/run/docker.sock
       - name: proc
