@@ -11,7 +11,7 @@ data:
       env = "$ENV"
     [agent]
       hostname = "$HOSTNAME"
-    [[outputs.influxdb]]
+    [[outputs.orangesys]]
       urls = ["$ORANGESYS_URL"] # required
       database = "telegraf"
 
