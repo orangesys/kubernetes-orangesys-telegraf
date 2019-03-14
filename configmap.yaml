@@ -16,9 +16,8 @@ data:
       database = "telegraf"
 
       jwt_token= "$JWT_TOKEN" # required
-
       timeout = "5s"
-      
+
     [[inputs.cpu]]
       percpu = true
       totalcpu = true
@@ -35,4 +34,6 @@ data:
     [[inputs.docker]]
       endpoint = "unix:///var/run/docker.sock"
     [[inputs.kubernetes]]
-      url = "http://127.0.0.1:10255"
+      url = "http://$HOSTNAME:10255"
+      bearer_token = "/var/run/secrets/kubernetes.io/serviceaccount/token"
+      insecure_skip_verify = true      
