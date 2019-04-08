@@ -17,6 +17,7 @@ spec:
       containers:
       - name: telegraf
         image: orangesys/orangesys-telegraf:latest
+        imagePullPolicy: Always
         resources:
           limits:
             memory: 500Mi
